@@ -1,0 +1,20 @@
+{
+  "name": "cypress_portfolio",
+  "version": "1.0.0",
+  "description": "1. Instalação do cypress:\r    1. npm init --yes\r    2. npm install cypress@latest --save-dev\r    3. npm i cypress --save",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --reporter mochawesome",
+    "merge-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochawesome-merged.json",
+    "generate-report": "marge cypress/reports/mochawesome-merged.json -f report -o cypress/reports",
+    "cy:run": "npm run test && npm run merge-reports && npm run generate-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "cypress": "^14.3.0",
+    "cypress-wait-until": "^3.0.2"
+  }
+}
